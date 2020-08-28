@@ -18,17 +18,18 @@ class EstimatorSelectionHelper:
 
     def fit(self, X, y, cv=4, n_jobs=3, verbose=1, scoring=None, refit=False, Randomized=False):
         for key in self.keys:
-            print("Running GridSearchCV for %s." % key)
             model = self.models[key]
             params = self.params[key]
             if Randomized:
                 gs = RandomizedSearchCV(model, params, cv=cv, n_jobs=n_jobs,
                               verbose=verbose, scoring=scoring, refit=refit,
                               return_train_score=True)
+                print("Running RandomizedSearchCV for %s." % key)
             else:
                 gs = GridSearchCV(model, params, cv=cv, n_jobs=n_jobs,
                                   verbose=verbose, scoring=scoring, refit=refit,
                                   return_train_score=True)
+                print("Running GridSearchCV for %s." % key)
             gs.fit(X,y)
             self.grid_searches[key] = gs    
 
