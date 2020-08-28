@@ -4,7 +4,7 @@
 # In[ ]:
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 #Grid searchCV
 class EstimatorSelectionHelper:
     def __init__(self, models, params):
@@ -16,14 +16,19 @@ class EstimatorSelectionHelper:
         self.keys = models.keys()
         self.grid_searches = {}
 
-    def fit(self, X, y, cv=4, n_jobs=3, verbose=1, scoring=None, refit=False):
+    def fit(self, X, y, cv=4, n_jobs=3, verbose=1, scoring=None, refit=False, Randomized=False):
         for key in self.keys:
             print("Running GridSearchCV for %s." % key)
             model = self.models[key]
             params = self.params[key]
-            gs = GridSearchCV(model, params, cv=cv, n_jobs=n_jobs,
+            if Randomized:
+                gs = RandomizedSearchCV(model, params, cv=cv, n_jobs=n_jobs,
                               verbose=verbose, scoring=scoring, refit=refit,
                               return_train_score=True)
+            else:
+                gs = GridSearchCV(model, params, cv=cv, n_jobs=n_jobs,
+                                  verbose=verbose, scoring=scoring, refit=refit,
+                                  return_train_score=True)
             gs.fit(X,y)
             self.grid_searches[key] = gs    
 
