@@ -5,6 +5,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
+import matplotlib.pyplot as plt
 #Grid searchCV
 class EstimatorSelectionHelper:
     def __init__(self, models, params):
@@ -65,3 +66,8 @@ class EstimatorSelectionHelper:
         columns = columns + [c for c in df.columns if c not in columns]
 
         return df[columns]
+    def plot(self, sort_by='mean_score'):
+    	var = self.score_summary(self, sort_by=sort_by)
+    	fig = plt.figure(figsize=(10,10))
+    	plt.plot(var['mean_score'])
+    	plt.show();  
