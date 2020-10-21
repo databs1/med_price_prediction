@@ -1,8 +1,8 @@
 # Drug Price Prediction
 ## General Description
-Drug price prediction from open source dataset, the datasets can be found in  https://github.com/databs1/med_price_prediction/tree/master/data , 
+Drug price prediction from open source dataset, the datasets can be found in  https://github.com/databs1/med_price_prediction/tree/master/data.
 two files one containing the names of the medications and another one containing textual data in one column (e.g. number of syringes, units of dosage, labels)
-and the rest of the columns contain structured data such as the date that the medication was taken out of market or the price of the medication.  
+and rest of the columns contain structured data such as the date that the medication was taken out of market or the price of the medication.  
  
 ## Problems encountered
 Lack of data supplied for most of the features leaves a lot of the predictors with null values makes the list of most traditional statistical models that can be used small.
