@@ -5,12 +5,14 @@ two files one containing the names of the medications and another one containing
 giving a general description of the contents of the medication. 
 The rest of the columns contain structured data such as the date that the medication was taken out of market or the price of the medication.  
  
-I used NLP to extract entities with their corresponding values from the textual data. 
-Feature engineering and feature selection was required to reduce dimensionality and increase model accuracy.  
+## Problems encountered
+Lack of data supplied for most of the features leaves a lot of the predictors with null values makes the list of most traditional statistical models that can be used small.
+Feature engineering and feature selection is a must to reduce dimensionality and lower execution time.  
 
-## Problems encountered and solutions
-The dataset came with its own inherit problems, one of which is a lack of data supplied for most of my features and thus leaving me with a lot of null values in my predictors. 
-To overcome this problem I decided to use different Zero Inflated models such as the Zero Inflated Poisson regression yielding poor results.
-I decided to go further, transforming some of my quantitative variables into qualitative variables (and also discretizing some) giving Random Forest and XGBoost a try. 
+## Solutions
+Zero Inflated models such as the Zero Inflated Poisson regression yielded poor results.
+Transforming some of the quantitative variables into qualitative variables (and also discretizing some) gives better results for Random Forest and XGBoost. 
+The log transformed price gives the best results.
 
-The results improved significantly, I run cross validation with grid search multiple times to validate my model and find the optimal hyperparameters achieving satisfying results. 
+## Results 
+I run cross validation with grid search multiple times to validate my model and find the optimal hyperparameters achieving satisfying results. GridSearch iterations can be found in grid_iterations.
