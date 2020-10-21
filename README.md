@@ -15,4 +15,5 @@ Transforming some of the quantitative variables into qualitative variables (and 
 The log transformed price gives the best results.
 
 ## Results 
-I run cross validation with grid search multiple times to validate my model and find the optimal hyperparameters achieving satisfying results. GridSearch iterations can be found in grid_iterations.
+I run cross validation with grid search multiple times to validate the model and find the optimal hyperparameters achieving satisfying results. GridSearch iterations can be found in grid_iterations.
+Best prediction scores were made with Random Forest.
