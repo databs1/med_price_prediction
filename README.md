@@ -5,7 +5,7 @@ Two files one containing the names of the medications and another one containing
 and rest of the columns contain structured data such as the date that the medication was taken out of market or the price of the medication.  
  
 ## Problems encountered
-Lack of data supplied for most of the features leaves a lot of the predictors with null values makes the list of most traditional statistical models that can be used small.
+Lack of data supplied for most of the features leaves a lot of predictors with null values, makes the list of most traditional statistical models that can be used smaller.
 Feature engineering and feature selection is a must to reduce dimensionality and lower execution time.  
 
 ## Solutions
