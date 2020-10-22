@@ -1,6 +1,6 @@
 # Drug price prediction from open source dataset
 ## General Description
-The datasets can be found in https://github.com/databs1/med_price_prediction/tree/master/data. 
+The datasets can be found in the <a href="https://github.com/databs1/med_price_prediction/tree/master/data">data</a> folder. 
 Two files one containing the names of the medication another one containing textual data (e.g. number of syringes, units of dosage, labels) with some structured data (e.g. date when the medication was taken out of market, price, route of administration).
 
 ## Problems encountered
@@ -14,4 +14,4 @@ The log transformation of the price gives overall better results than the box co
 
 ## Results
 I run cross validation with grid search multiple times to validate the model and find the optimal hyperparameters achieving satisfying results. 
-Grid search iterations can be found in grid_iterations. Best prediction scores were made with Random Forest.
+Grid search iterations can be found in <a href="https://github.com/databs1/med_price_prediction/tree/master/grid_iterations">grid_iterations</a>. Best prediction scores were made with Random Forest.
