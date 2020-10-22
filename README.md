@@ -1,5 +1,6 @@
-# General Description
-## Drug price prediction from open source dataset. The datasets can be found in https://github.com/databs1/med_price_prediction/tree/master/data. Two files one containing the names of the medication another one containing textual data (e.g. number of syringes, units of dosage, labels) with some structured data (e.g. date when the medication was taken out of market, price, route of administration).
+# Drug price prediction from open source dataset
+## General Description
+The datasets can be found in https://github.com/databs1/med_price_prediction/tree/master/data. Two files one containing the names of the medication another one containing textual data (e.g. number of syringes, units of dosage, labels) with some structured data (e.g. date when the medication was taken out of market, price, route of administration).
 
 ## Problems encountered
 After using NLP to extract quantities from the textual data (e.g. number of tablets, dosage). A lack of data supplied for most of the features left a lot of predictors with null values making the list of most traditional models that can be used small. 
