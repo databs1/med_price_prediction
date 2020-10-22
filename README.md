@@ -16,5 +16,5 @@ The log transformation of the price gives overall better results than the box co
 ## Results
 I run cross validation with grid search multiple times to validate the model and find the optimal hyperparameters achieving satisfying results. <br />
 Grid search iterations can be found in <a href="https://github.com/databs1/med_price_prediction/tree/master/grid_iterations">grid_iterations</a>. <br />
-Best prediction scores were made with Random Forest.
+Best prediction scores were made with Random Forest.<br />
 ![Predicted vs actual](https://github.com/databs1/med_price_prediction/blob/master/Predicted_vs_actual.png)
